@@ -1,0 +1,73 @@
+{
+  "kind": "nash_evaluation_results",
+  "task": "listwise",
+  "input_file": "data/listwise_test.json",
+  "description": "Completed task-level upload result example for NASH DEMO Batch Upload.",
+  "rows": [
+    {
+      "id": "listwise_001",
+      "title": "Temporal listwise 001",
+      "task": "listwise",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "baseline_label": "Sentence-BERT / all-MiniLM-L6-v2",
+      "backend": "sentence-transformer",
+      "pair_results": [
+        {
+          "label": "Candidate 1",
+          "sentence1": "The company expects 2024 revenue of $106 million.",
+          "sentence2": "The company expects 2024 revenue of $108 million.",
+          "baseline_score": 0.971,
+          "nash_score": 0.943,
+          "text_score": 0.968,
+          "numeric_score": 0.906
+        },
+        {
+          "label": "Candidate 2",
+          "sentence1": "The company expects 2024 revenue of $106 million.",
+          "sentence2": "The company expects 2034 revenue of $106 million.",
+          "baseline_score": 0.964,
+          "nash_score": 0.733,
+          "text_score": 0.961,
+          "numeric_score": 0.452
+        },
+        {
+          "label": "Candidate 3",
+          "sentence1": "The company expects 2024 revenue of $106 million.",
+          "sentence2": "The company expects 2024 revenue of $16 million.",
+          "baseline_score": 0.957,
+          "nash_score": 0.624,
+          "text_score": 0.953,
+          "numeric_score": 0.216
+        }
+      ]
+    },
+    {
+      "id": "listwise_002",
+      "title": "Monetary listwise 002",
+      "task": "listwise",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "baseline_label": "Sentence-BERT / all-MiniLM-L6-v2",
+      "backend": "sentence-transformer",
+      "pair_results": [
+        {
+          "label": "Candidate 1",
+          "sentence1": "Net income was $5 million on revenue of $100 million.",
+          "sentence2": "Net income was $6 million on revenue of $100 million.",
+          "baseline_score": 0.966,
+          "nash_score": 0.928,
+          "text_score": 0.961,
+          "numeric_score": 0.874
+        },
+        {
+          "label": "Candidate 2",
+          "sentence1": "Net income was $5 million on revenue of $100 million.",
+          "sentence2": "Net income was $100 million on revenue of $5 million.",
+          "baseline_score": 0.948,
+          "nash_score": 0.502,
+          "text_score": 0.944,
+          "numeric_score": 0.071
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "kind": "nash_evaluation_results",
+  "task": "crosspair",
+  "input_file": "data/crosspair_test.json",
+  "description": "Completed task-level upload result example for NASH DEMO Batch Upload.",
+  "rows": [
+    {
+      "id": "crosspair_001",
+      "title": "Temporal crosspair 001",
+      "task": "crosspair",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "baseline_label": "Sentence-BERT / all-MiniLM-L6-v2",
+      "backend": "sentence-transformer",
+      "pair_results": [
+        {
+          "label": "Pair A",
+          "sentence1": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $106 million.",
+          "sentence2": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2030 by $106 million.",
+          "masked_sentence1": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in [NUM] by $[NUM] million.",
+          "masked_sentence2": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in [NUM] by $[NUM] million.",
+          "baseline_score": 0.969,
+          "nash_score": 0.948,
+          "text_score": 0.966,
+          "numeric_score": 0.921,
+          "numbers_sentence1": [
+            { "index": 0, "raw": "2024", "value": 2024, "start": 151, "end": 155 },
+            { "index": 1, "raw": "106", "value": 106, "start": 160, "end": 163 }
+          ],
+          "numbers_sentence2": [
+            { "index": 0, "raw": "2030", "value": 2030, "start": 151, "end": 155 },
+            { "index": 1, "raw": "106", "value": 106, "start": 160, "end": 163 }
+          ],
+          "alignment": {
+            "matrix": [[0.905, 0.407], [0.413, 0.997]],
+            "selected_alignment_edges": [
+              { "direction": "sentence1_to_sentence2", "source_index": 0, "target_index": 0, "context_similarity": 0.905, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 1, "target_index": 1, "context_similarity": 0.997, "aligned": true }
+            ]
+          }
+        },
+        {
+          "label": "Pair B",
+          "sentence1": "AbbVie repurchased 10 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+          "sentence2": "AbbVie repurchased 10 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2010.",
+          "masked_sentence1": "AbbVie repurchased [NUM] million shares for $[NUM] billion in [NUM] and [NUM] million shares for $[NUM] billion in [NUM].",
+          "masked_sentence2": "AbbVie repurchased [NUM] million shares for $[NUM] billion in [NUM] and [NUM] million shares for $[NUM] billion in [NUM].",
+          "baseline_score": 0.944,
+          "nash_score": 0.586,
+          "text_score": 0.941,
+          "numeric_score": 0.158,
+          "numbers_sentence1": [
+            { "index": 0, "raw": "10", "value": 10, "start": 20, "end": 22 },
+            { "index": 1, "raw": "1.6", "value": 1.6, "start": 43, "end": 46 },
+            { "index": 2, "raw": "2023", "value": 2023, "start": 58, "end": 62 },
+            { "index": 3, "raw": "8", "value": 8, "start": 67, "end": 68 },
+            { "index": 4, "raw": "1.1", "value": 1.1, "start": 89, "end": 92 },
+            { "index": 5, "raw": "2022", "value": 2022, "start": 104, "end": 108 }
+          ],
+          "numbers_sentence2": [
+            { "index": 0, "raw": "10", "value": 10, "start": 20, "end": 22 },
+            { "index": 1, "raw": "1.6", "value": 1.6, "start": 43, "end": 46 },
+            { "index": 2, "raw": "2023", "value": 2023, "start": 58, "end": 62 },
+            { "index": 3, "raw": "8", "value": 8, "start": 67, "end": 68 },
+            { "index": 4, "raw": "1.1", "value": 1.1, "start": 89, "end": 92 },
+            { "index": 5, "raw": "2010", "value": 2010, "start": 104, "end": 108 }
+          ],
+          "alignment": {
+            "matrix": [
+              [0.998, 0.301, 0.224, 0.433, 0.287, 0.201],
+              [0.302, 0.999, 0.311, 0.245, 0.701, 0.210],
+              [0.220, 0.314, 0.998, 0.205, 0.310, 0.895],
+              [0.431, 0.245, 0.207, 0.996, 0.296, 0.212],
+              [0.286, 0.702, 0.312, 0.296, 0.999, 0.218],
+              [0.203, 0.211, 0.894, 0.213, 0.219, 0.862]
+            ],
+            "selected_alignment_edges": [
+              { "direction": "sentence1_to_sentence2", "source_index": 0, "target_index": 0, "context_similarity": 0.998, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 1, "target_index": 1, "context_similarity": 0.999, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 2, "target_index": 2, "context_similarity": 0.998, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 3, "target_index": 3, "context_similarity": 0.996, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 4, "target_index": 4, "context_similarity": 0.999, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 5, "target_index": 5, "context_similarity": 0.862, "aligned": true }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "crosspair_002",
+      "title": "Temporal crosspair 002",
+      "task": "crosspair",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "baseline_label": "Sentence-BERT / all-MiniLM-L6-v2",
+      "backend": "sentence-transformer",
+      "pair_results": [
+        {
+          "label": "Pair A",
+          "sentence1": "Diluted earnings per share in 2023 was $2.72 and included the following after-tax costs: (i) $6.7 billion related to the amortization of intangible assets; (ii) $5.0 billion for the change in fair value of contingent consideration liabilities; (iii) $3.5 billion related to intangible asset impairment; and (iv) $122 million of acquisition and integration expenses.",
+          "sentence2": "Diluted earnings per share in 2021 was $2.72 and included the following after-tax costs: (i) $6.7 billion related to the amortization of intangible assets; (ii) $5.0 billion for the change in fair value of contingent consideration liabilities; (iii) $3.5 billion related to intangible asset impairment; and (iv) $122 million of acquisition and integration expenses.",
+          "masked_sentence1": "Diluted earnings per share in [NUM] was $[NUM] and included the following after-tax costs: (i) $[NUM] billion related to the amortization of intangible assets; (ii) $[NUM] billion for the change in fair value of contingent consideration liabilities; (iii) $[NUM] billion related to intangible asset impairment; and (iv) $[NUM] million of acquisition and integration expenses.",
+          "masked_sentence2": "Diluted earnings per share in [NUM] was $[NUM] and included the following after-tax costs: (i) $[NUM] billion related to the amortization of intangible assets; (ii) $[NUM] billion for the change in fair value of contingent consideration liabilities; (iii) $[NUM] billion related to intangible asset impairment; and (iv) $[NUM] million of acquisition and integration expenses.",
+          "baseline_score": 0.962,
+          "nash_score": 0.927,
+          "text_score": 0.959,
+          "numeric_score": 0.884,
+          "numbers_sentence1": [
+            { "index": 0, "raw": "2023", "value": 2023, "start": 30, "end": 34 },
+            { "index": 1, "raw": "2.72", "value": 2.72, "start": 40, "end": 44 },
+            { "index": 2, "raw": "6.7", "value": 6.7, "start": 96, "end": 99 },
+            { "index": 3, "raw": "5.0", "value": 5.0, "start": 174, "end": 177 },
+            { "index": 4, "raw": "3.5", "value": 3.5, "start": 274, "end": 277 },
+            { "index": 5, "raw": "122", "value": 122, "start": 337, "end": 340 }
+          ],
+          "numbers_sentence2": [
+            { "index": 0, "raw": "2021", "value": 2021, "start": 30, "end": 34 },
+            { "index": 1, "raw": "2.72", "value": 2.72, "start": 40, "end": 44 },
+            { "index": 2, "raw": "6.7", "value": 6.7, "start": 96, "end": 99 },
+            { "index": 3, "raw": "5.0", "value": 5.0, "start": 174, "end": 177 },
+            { "index": 4, "raw": "3.5", "value": 3.5, "start": 274, "end": 277 },
+            { "index": 5, "raw": "122", "value": 122, "start": 337, "end": 340 }
+          ],
+          "alignment": {
+            "matrix": [
+              [0.932, 0.335, 0.281, 0.260, 0.252, 0.240],
+              [0.331, 0.999, 0.562, 0.521, 0.488, 0.302],
+              [0.280, 0.561, 0.998, 0.701, 0.596, 0.318],
+              [0.262, 0.520, 0.700, 0.999, 0.624, 0.325],
+              [0.250, 0.487, 0.595, 0.624, 0.999, 0.337],
+              [0.241, 0.303, 0.319, 0.326, 0.338, 0.997]
+            ],
+            "selected_alignment_edges": [
+              { "direction": "sentence1_to_sentence2", "source_index": 0, "target_index": 0, "context_similarity": 0.932, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 1, "target_index": 1, "context_similarity": 0.999, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 2, "target_index": 2, "context_similarity": 0.998, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 3, "target_index": 3, "context_similarity": 0.999, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 4, "target_index": 4, "context_similarity": 0.999, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 5, "target_index": 5, "context_similarity": 0.997, "aligned": true }
+            ]
+          }
+        },
+        {
+          "label": "Pair B",
+          "sentence1": "During the quarter ended December 31, 2023 the company also repaid €500 million aggregate principal amount of 1.50% senior euro notes and $1.3 billion aggregate principal amount of 3.75% senior notes at maturity.",
+          "sentence2": "During the quarter ended December 31, 2024 the company also repaid €500 million aggregate principal amount of 1.50% senior euro notes and $1.3 billion aggregate principal amount of 3.75% senior notes at maturity.",
+          "masked_sentence1": "During the quarter ended December [NUM], [NUM] the company also repaid €[NUM] million aggregate principal amount of [NUM]% senior euro notes and $[NUM] billion aggregate principal amount of [NUM]% senior notes at maturity.",
+          "masked_sentence2": "During the quarter ended December [NUM], [NUM] the company also repaid €[NUM] million aggregate principal amount of [NUM]% senior euro notes and $[NUM] billion aggregate principal amount of [NUM]% senior notes at maturity.",
+          "baseline_score": 0.936,
+          "nash_score": 0.541,
+          "text_score": 0.928,
+          "numeric_score": 0.126,
+          "numbers_sentence1": [
+            { "index": 0, "raw": "31", "value": 31, "start": 36, "end": 38 },
+            { "index": 1, "raw": "2023", "value": 2023, "start": 40, "end": 44 },
+            { "index": 2, "raw": "500", "value": 500, "start": 75, "end": 78 },
+            { "index": 3, "raw": "1.50", "value": 1.5, "start": 119, "end": 123 },
+            { "index": 4, "raw": "1.3", "value": 1.3, "start": 148, "end": 151 },
+            { "index": 5, "raw": "3.75", "value": 3.75, "start": 188, "end": 192 }
+          ],
+          "numbers_sentence2": [
+            { "index": 0, "raw": "31", "value": 31, "start": 36, "end": 38 },
+            { "index": 1, "raw": "2024", "value": 2024, "start": 40, "end": 44 },
+            { "index": 2, "raw": "500", "value": 500, "start": 75, "end": 78 },
+            { "index": 3, "raw": "1.50", "value": 1.5, "start": 119, "end": 123 },
+            { "index": 4, "raw": "1.3", "value": 1.3, "start": 148, "end": 151 },
+            { "index": 5, "raw": "3.75", "value": 3.75, "start": 188, "end": 192 }
+          ],
+          "alignment": {
+            "matrix": [
+              [0.997, 0.285, 0.311, 0.208, 0.205, 0.205],
+              [0.283, 0.895, 0.318, 0.214, 0.211, 0.210],
+              [0.312, 0.319, 0.998, 0.401, 0.384, 0.375],
+              [0.207, 0.213, 0.400, 0.999, 0.701, 0.689],
+              [0.204, 0.210, 0.383, 0.700, 0.999, 0.705],
+              [0.205, 0.209, 0.374, 0.688, 0.704, 0.999]
+            ],
+            "selected_alignment_edges": [
+              { "direction": "sentence1_to_sentence2", "source_index": 0, "target_index": 0, "context_similarity": 0.997, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 1, "target_index": 1, "context_similarity": 0.895, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 2, "target_index": 2, "context_similarity": 0.998, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 3, "target_index": 3, "context_similarity": 0.999, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 4, "target_index": 4, "context_similarity": 0.999, "aligned": true },
+              { "direction": "sentence1_to_sentence2", "source_index": 5, "target_index": 5, "context_similarity": 0.999, "aligned": true }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

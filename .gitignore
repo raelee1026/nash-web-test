@@ -1,0 +1,159 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+conda/
+*.conda
+
+# =========================
+# Jupyter / Notebook
+# =========================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+log/
+wandb/
+runs/
+tensorboard/
+lightning_logs/
+
+# =========================
+# Experiment outputs
+# =========================
+outputs/
+output/
+results/
+result/
+experiments/
+checkpoints/
+checkpoint/
+saved_models/
+models/
+model/
+runs/
+eval_outputs/
+predictions/
+tmp/
+temp/
+app/dist/
+app/node_modules/
+
+# =========================
+# Large ML / NLP files
+# =========================
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.arrow
+*.parquet
+
+# =========================
+# Hugging Face / Transformers cache
+# =========================
+.cache/
+hf_cache/
+huggingface/
+transformers_cache/
+datasets_cache/
+
+# =========================
+# Data files
+# =========================
+data/
+datasets/
+raw_data/
+processed_data/
+external_data/
+
+# Keep folder structure if needed
+!data/.gitkeep
+!datasets/.gitkeep
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+*.env
+!app/.env.example
+!app/.env.production
+secrets/
+*.key
+*.pem
+credentials.json
+token.json
+
+# =========================
+# OS files
+# =========================
+Thumbs.db
+Desktop.ini
+
+# =========================
+# Archives
+# =========================
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# =========================
+# LaTeX / Paper build files
+# =========================
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+
+# =========================
+# macOS
+# =========================
+.AppleDouble
+.LSOverride
